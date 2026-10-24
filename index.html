@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0c12" />
+  <title>CairBnB — Host growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="premium.css" />
+  <link rel="stylesheet" href="premium-dark.css" />
+</head>
+<body><section class="auth-gate" id="authGate" aria-labelledby="authTitle"><div class="auth-backdrop-art"></div><div class="auth-card"><div class="auth-brand"><span class="auth-logo"><svg viewBox="0 0 48 48" role="img" aria-label="CairBnB"><path d="M8 21.5 24 9l16 12.5v17H8z"/><path d="M18.5 38.5V26h11v12.5M34 10.5V6"/><path d="m36.5 13 3 3m-11-3-3 3"/></svg></span><span class="brand-word">Cair<span>BnB</span></span></div><div class="auth-eyebrow">YOUR OPERATIONS, IN GOOD HANDS</div><h1 id="authTitle">A calmer way to run every turn.</h1><p class="auth-intro" id="authIntro">Your leads, properties, and daily plan—thoughtfully brought together.</p><div class="auth-rule"></div><form id="authForm"><label class="auth-label" for="authPassword" id="authPasswordLabel">PASSWORD</label><div class="auth-input-wrap"><input id="authPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="10"><button type="button" class="auth-reveal" id="authReveal" aria-label="Show password">Show</button></div><div id="confirmPasswordWrap" hidden><label class="auth-label" for="authConfirm">CONFIRM PASSWORD</label><input id="authConfirm" class="auth-confirm" type="password" autocomplete="new-password" placeholder="Enter it once more" minlength="10"></div><div class="auth-error" id="authError" role="alert"></div><button class="auth-submit" type="submit" id="authSubmit">Sign in <span>→</span></button></form><div class="auth-foot"><span class="auth-lock">◇</span><span>Your password stays in this browser preview. Production sign-in needs secure server-side accounts.</span></div><div class="auth-version">CAIRBNB OPERATIONS · PRIVATE WORKSPACE</div></div><div class="auth-side-note"><span>MADE FOR THE MOMENTS BETWEEN CHECKOUT AND CHECK-IN</span><i></i><span>SAN DIEGO, CALIFORNIA</span></div></section>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-icon">C</span><span class="brand-word">Cair<span>BnB</span></span></a>
+    <div class="workspace"><span class="workspace-icon">C</span><span><strong>CairBnB</strong><small>San Diego, California</small></span><span class="chevron">⌄</span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav>
+      <a class="nav-item active" href="#"><span class="nav-icon">▦</span> Lead finder <span class="nav-count" id="navCount">0</span></a>
+      <a class="nav-item" href="#pipeline"><span class="nav-icon">◷</span> Follow-ups</a>
+      <a class="nav-item" href="operations.html"><span class="nav-icon">▤</span> Cleaning operations</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="upgrade-card"><div class="upgrade-spark">✳</div><strong>Your next client is nearby.</strong><p>Find licensed short-term rentals and turn them into cleaning contracts.</p><button id="sidebarImport">Import public leads <span>↗</span></button></div>
+      <div class="profile"><div class="avatar">C</div><div><strong>CairBnB</strong><small>San Diego workspace</small></div><span class="more">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><div class="breadcrumbs">CairBnB <span>/</span> <b>Lead finder</b></div><div class="top-actions"><button class="launcher-button" data-command-open><span>⌘</span> Quick switch <kbd>⌘ K</kbd></button><span class="source-pill"><i></i> San Diego public records</span><button class="help-button" title="About this tool">?</button></div></header>
+    <section class="content">
+      <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> LOCAL BUSINESS GROWTH</div><h1>Find your next <em>cleaning client.</em></h1><p class="subtitle">A focused list of licensed short-term rentals around San Diego, ready for thoughtful outreach.</p></div><button id="importBtn" class="primary-button"><span>＋</span> Import public leads</button></div>
+
+      <div class="data-note"><span class="note-icon">i</span><span><b>Public data, useful context.</b> Leads come from the City of San Diego’s active STRO license list. A license does not mean the host needs a new cleaner. Review each lead and personalize your approach.</span><a href="https://data.sandiego.gov/datasets/stro-licenses/" target="_blank" rel="noreferrer">View source ↗</a></div>
+
+      <section class="stats-grid">
+        <div class="stat-card"><div class="stat-top"><span>LEADS IN YOUR AREA</span><span class="stat-icon green">⌖</span></div><div class="stat-value" id="statLeads">—</div><div class="stat-foot"><span class="dot-green"></span><span id="statArea">Import records to get started</span></div></div>
+        <div class="stat-card"><div class="stat-top"><span>NEED A FOLLOW-UP</span><span class="stat-icon amber">◷</span></div><div class="stat-value" id="statFollowups">0</div><div class="stat-foot">Keep the conversation moving</div></div>
+        <div class="stat-card"><div class="stat-top"><span>IN YOUR PIPELINE</span><span class="stat-icon blue">↗</span></div><div class="stat-value" id="statPipeline">0</div><div class="stat-foot">Leads you’re actively working</div></div>
+        <div class="stat-card"><div class="stat-top"><span>CONTRACTS WON</span><span class="stat-icon violet">✦</span></div><div class="stat-value" id="statWon">0</div><div class="stat-foot">Every great partnership starts somewhere</div></div>
+      </section>
+
+      <section class="lead-spotlight reveal" id="leadSpotlight" hidden aria-label="Featured leads"><div class="spotlight-heading"><div><div class="eyebrow">A GOOD PLACE TO START</div><h2>Fresh on your radar<span>.</span></h2><p>Swipe through new contacts and open the ones you want to work.</p></div><div class="carousel-controls"><button id="spotlightPrev" aria-label="Previous leads">←</button><button id="spotlightNext" aria-label="Next leads">→</button></div></div><div class="spotlight-track" id="spotlightTrack" tabindex="0" aria-label="Lead carousel"></div></section>
+
+      <section class="leads-panel" id="pipeline">
+        <div class="panel-heading"><div><h2>Your local leads</h2><p>Choose a neighborhood, find a good fit, and start a real conversation.</p></div><button id="exportBtn" class="secondary-button" disabled><span>⇩</span> Export</button></div>
+        <div class="toolbar"><div class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search name, neighborhood, ZIP..." /></div><select id="areaFilter"><option value="">All neighborhoods</option></select><select id="tierFilter"><option value="">All license tiers</option><option>Tier 1</option><option>Tier 2</option><option>Tier 3</option><option>Tier 4</option></select><select id="statusFilter"><option value="">All statuses</option><option value="new">New lead</option><option value="contacted">Contacted</option><option value="replied">Replied</option><option value="won">Won</option><option value="not_fit">Not a fit</option></select></div>
+        <div class="table-wrap"><table><thead><tr><th>HOST / LOCAL CONTACT</th><th>NEIGHBORHOOD</th><th>LICENSE</th><th>EXPIRATION</th><th>STATUS</th><th></th></tr></thead><tbody id="leadRows"></tbody></table>
+          <div class="empty-state" id="emptyState"><div class="empty-art"><span>⌖</span><i></i></div><h3>Your next client is closer than you think.</h3><p>Import San Diego’s public STRO records to find local hosts and build your outreach list.</p><button class="primary-button" id="emptyImport">Import public leads <span>↗</span></button><div class="empty-secondary">or <label for="csvInput">upload a CSV</label> you already have</div></div>
+        </div>
+        <div class="table-footer"><span id="resultCount">No leads loaded</span><div class="table-paging"><button id="leadPrev" type="button" aria-label="Previous page" disabled>‹</button><span id="leadPage">Page 1 of 1</span><button id="leadNext" type="button" aria-label="Next page" disabled>›</button></div><span class="local-save"><i></i> Your notes and statuses save on this device</span></div>
+      </section>
+      <footer>Made for independent cleaning teams <span>·</span> Data from <a href="https://data.sandiego.gov/datasets/stro-licenses/" target="_blank" rel="noreferrer">City of San Diego Open Data</a></footer>
+    </section>
+  </main>
+
+  <input id="csvInput" type="file" accept=".csv,text/csv" hidden />
+  <div class="toast" id="toast"></div>
+  <div class="command-backdrop" id="commandBackdrop"><section class="command-box"><div class="command-search"><span>⌕</span><input id="commandInput" placeholder="Search pages and actions..." autocomplete="off"><kbd>ESC</kbd></div><div class="command-label">QUICK ACTIONS</div><div id="commandResults"></div><div class="command-foot"><span>↵ to select</span><span>↑ ↓ to navigate</span><span>Esc to close</span></div></section></div>
+  <div class="modal-backdrop" id="modalBackdrop"><section class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modalName"><button class="modal-close" id="modalClose">×</button><div class="modal-eyebrow">LEAD DETAILS</div><h2 id="modalName"></h2><div class="modal-sub" id="modalAddress"></div><div class="modal-meta" id="modalMeta"></div><div class="modal-label">A thoughtful first note</div><div class="message-preview" id="messagePreview" contenteditable="true" aria-label="Edit outreach message"></div><div class="message-actions"><button class="secondary-button copy-button" id="copyMessage">Copy message</button><button class="secondary-button" id="emailLead">Open email</button><button class="secondary-button" id="textLead">Open text</button><button class="secondary-button" id="profileLead">Open profile</button></div><div class="modal-label notes-label">Your notes</div><textarea id="leadNotes" placeholder="Add a reminder, conversation detail, or next step..."></textarea><div class="modal-controls"><label>Status<select id="modalStatus"><option value="new">New lead</option><option value="contacted">Contacted</option><option value="replied">Replied</option><option value="won">Won</option><option value="not_fit">Not a fit</option></select></label><label>Follow up on<input type="date" id="modalFollowup" /></label></div><button id="saveLead" class="primary-button save-button">Save lead</button><p class="privacy-note">Open email/text prepares a message in your device’s app. Review and send it yourself.</p></section></div>
+  <script src="auth.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
